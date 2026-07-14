@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70" width="320" height="70">
+  <style>
+    .logo-title {
+      font-family: 'Space Grotesk', 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 42px;
+      fill: #3ecf8e;
+      letter-spacing: -0.04em;
+    }
+    .cursor {
+      animation: blink 0.8s infinite;
+      fill: #3ecf8e;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    
+    /* Character typing keyframes for ZALSHI */
+    @keyframes char-Z { 0%, 4% { opacity: 0; } 5%, 75% { opacity: 1; } 76%, 100% { opacity: 0; } }
+    @keyframes char-a { 0%, 9% { opacity: 0; } 10%, 70% { opacity: 1; } 71%, 100% { opacity: 0; } }
+    @keyframes char-l { 0%, 14% { opacity: 0; } 15%, 65% { opacity: 1; } 66%, 100% { opacity: 0; } }
+    @keyframes char-s { 0%, 19% { opacity: 0; } 20%, 60% { opacity: 1; } 61%, 100% { opacity: 0; } }
+    @keyframes char-h { 0%, 24% { opacity: 0; } 25%, 55% { opacity: 1; } 56%, 100% { opacity: 0; } }
+    @keyframes char-i { 0%, 29% { opacity: 0; } 30%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+
+    /* Character typing keyframes for JS */
+    @keyframes char-J { 0%, 79% { opacity: 0; } 80%, 95% { opacity: 1; } 96%, 100% { opacity: 0; } }
+    @keyframes char-S { 0%, 84% { opacity: 0; } 85%, 90% { opacity: 1; } 91%, 100% { opacity: 0; } }
+
+    .z-Z { animation: char-Z 8s steps(1) infinite; }
+    .z-a { animation: char-a 8s steps(1) infinite; }
+    .z-l { animation: char-l 8s steps(1) infinite; }
+    .z-s { animation: char-s 8s steps(1) infinite; }
+    .z-h { animation: char-h 8s steps(1) infinite; }
+    .z-i { animation: char-i 8s steps(1) infinite; }
+
+    .js-J { animation: char-J 8s steps(1) infinite; }
+    .js-S { animation: char-S 8s steps(1) infinite; }
+
+    /* Dynamic cursor carriage positioning */
+    @keyframes move-cursor {
+      0%, 4% { transform: translateX(0px); }
+      5%, 9% { transform: translateX(28px); }
+      10%, 14% { transform: translateX(54px); }
+      15%, 19% { transform: translateX(76px); }
+      20%, 24% { transform: translateX(102px); }
+      25%, 29% { transform: translateX(128px); }
+      30%, 50% { transform: translateX(148px); }
+      55% { transform: translateX(128px); }
+      60% { transform: translateX(102px); }
+      65% { transform: translateX(76px); }
+      70% { transform: translateX(54px); }
+      75% { transform: translateX(28px); }
+      76%, 79% { transform: translateX(0px); }
+      80%, 84% { transform: translateX(24px); }
+      85%, 90% { transform: translateX(48px); }
+      91%, 95% { transform: translateX(24px); }
+      96%, 100% { transform: translateX(0px); }
+    }
+    .cursor-group {
+      animation: move-cursor 8s steps(1) infinite;
+    }
+  </style>
+  
+  <g class="logo-title">
+    <!-- ZALSHI Group -->
+    <text x="10" y="50">
+      <tspan class="z-Z">Z</tspan>
+      <tspan class="z-a">A</tspan>
+      <tspan class="z-l">L</tspan>
+      <tspan class="z-s">S</tspan>
+      <tspan class="z-h">H</tspan>
+      <tspan class="z-i">I</tspan>
+    </text>
+
+    <!-- JS Group -->
+    <text x="10" y="50">
+      <tspan class="js-J">J</tspan>
+      <tspan class="js-S">S</tspan>
+    </text>
+    
+    <!-- Cursor carriage -->
+    <g class="cursor-group">
+      <text x="12" y="50" class="cursor">|</text>
+    </g>
+  </g>
+</svg>

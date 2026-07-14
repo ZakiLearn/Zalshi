@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <style>
+    .fav-text {
+      font-family: 'Space Grotesk', 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      fill: #3ecf8e;
+      letter-spacing: -0.06em;
+    }
+  </style>
+  <text x="16" y="22" text-anchor="middle" dominant-baseline="central" class="fav-text">ZL</text>
+</svg>
