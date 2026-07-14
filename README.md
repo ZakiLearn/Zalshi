@@ -4,7 +4,7 @@
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+## Tech Stack & Architecture
 
 Zalshi is a **serverless, client-side React SPA** designed to let developers explore, edit, and simulate algorithms fully inside the browser.
 
@@ -26,7 +26,32 @@ graph TD
 
 ---
 
-## ⚙️ How to Run Locally
+## Repository Structure
+
+```text
+platform/
+├── public/                 # Static assets
+│   ├── favicon.svg         # Minimal ZL transparent favicon
+│   └── logo-animated.svg   # Animated typing SVG logo
+├── scripts/                # Development utility scripts
+│   ├── copy-algorithms.js  # Copies algorithm files to local source
+│   ├── generate-codebase.js# Generates the codebase.json index
+│   └── test-trace-integrity.js # Syntax verification test runner
+├── src/                    # React application source code
+│   ├── algorithms/         # Localized algorithms files
+│   ├── utils/
+│   │   └── parser.js       # Shared AST-like parser and injector logic
+│   ├── App.tsx             # Main dashboard UI
+│   ├── index.css           # Supabase dark/light theme definitions
+│   └── main.tsx            # React application entrypoint
+├── index.html              # HTML shell template
+├── package.json            # Node dependencies and scripts
+└── tsconfig.json           # TypeScript configuration
+```
+
+---
+
+## How to Run Locally
 
 ### 1. Rebuild the Codebase Index
 If you add or update files in the codebase, regenerate the static index database:
